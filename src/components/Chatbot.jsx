@@ -2,22 +2,14 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import BotMessage from "./BotMessage";
 import UserMessage from "./UserMessage";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Loading from "./Loading";
+import predictedResponses from "../data/data.json";
+import ReactHtmlParser from "react-html-parser";
 
 const Chatbot = () => {
   const [chatHistory, setChatHistory] = useState([]);
-
-  const res = [
-    {
-      question: "hello",
-      response: "how are you doing today?",
-    },
-    {
-      question: "hi",
-      response: "what do you need",
-    },
-  ];
+  const chatBlockRef = useRef(null);
 
   const formik = useFormik({
     initialValues: {
@@ -32,7 +24,9 @@ const Chatbot = () => {
         ...prevData,
         { owner: "user", responses: values.message },
       ]);
-      const resp = res.find((res) => res.question === values.message)?.response;
+      const resp = predictedResponses.find(
+        (predictedResponse) => predictedResponse.question === values.message
+      )?.response;
       setTimeout(() => {
         if (resp) {
           setSubmitting(false);
@@ -41,6 +35,9 @@ const Chatbot = () => {
             ...prevData,
             { owner: "bot", responses: resp },
           ]);
+          chatBlockRef.current.scrollIntoView({
+            block: "end",
+          });
         } else {
           setSubmitting(false);
           resetForm();
@@ -48,8 +45,16 @@ const Chatbot = () => {
             ...prevData,
             { owner: "bot", responses: "I don't understand" },
           ]);
+          chatBlockRef.current.scrollIntoView({
+            block: "end",
+          });
         }
       }, 1000);
+      setTimeout(() => {
+        chatBlockRef.current.scrollIntoView({
+          block: "end",
+        });
+      }, 2000);
     },
   });
 
@@ -58,7 +63,7 @@ const Chatbot = () => {
       <div className="chat-header ">TouchdownAI</div>
 
       <div className="chat-body">
-        <div className="chat-block" id="chat-block">
+        <div className="chat-block" ref={chatBlockRef}>
           <h5 className="chat-timestamp text-center">
             {new Date().getHours() > 10
               ? new Date().getHours()
@@ -72,7 +77,11 @@ const Chatbot = () => {
             if (item.owner === "user") {
               return <UserMessage key={i} message={item.responses} />;
             } else {
-              return <BotMessage key={i} message={item.responses} />;
+              return (
+                <BotMessage key={i}>
+                  {ReactHtmlParser(item.responses)}
+                </BotMessage>
+              );
             }
           })}
         </div>

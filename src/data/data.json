@@ -1,0 +1,10 @@
+[
+  {
+    "question": "List currently injured Kansas City Chiefs players with their injuries and time of recovery.",
+    "response": "Full name - Patrick Mahomes <br /> Injury - Ankle Sprain <br /> Time of recovery - 2 weeks <br /> <br /> Full name - Travis Kelce <br />Injury - Hamstring Strain <br /> Time of recovery - 3 weeks <br /> <br /> Full name - Tyreek Hill <br /> Injury - Shoulder Contusion <br /> Time of recovery - 4 weeks <br />"
+  },
+  {
+    "question": "Give a summary of the just-concluded Super Bowl game with important highlights.",
+    "response": "The just-concluded Super Bowl game was played between the Kansas City Chiefs and the Tampa Bay Buccaneers. The Buccaneers emerged as the winners with a score of 31-20. Tom Brady threw for three touchdown passes, and Rob Gronkowski scored two touchdowns for the Buccaneers. Patrick Mahomes completed a 60-yard touchdown pass to Tyreek Hill. Tampa Bay's defense made crucial stops in the fourth quarter. The game was played at Raymond James Stadium in Tampa, FL, and Tom Brady was named the MVP of the game."
+  }
+]
