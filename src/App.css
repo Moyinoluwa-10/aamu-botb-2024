@@ -1,0 +1,45 @@
+/* loading message animation */
+.loading {
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  z-index: 999;
+  display: flex;
+}
+
+.loading.hidden {
+  display: none;
+}
+
+.loading > .circle {
+  height: 20px;
+  width: 20px;
+  background-color: #0652c0;
+  margin: 5px;
+  border-radius: 50%;
+}
+
+.loading > .circle:nth-child(1) {
+  animation: blink 1s 0s ease-in-out both infinite;
+}
+
+.loading > .circle:nth-child(2) {
+  animation: blink 1s 0.2s ease-in-out both infinite;
+}
+
+.loading > .circle:nth-child(3) {
+  animation: blink 1s 0.4s ease-in-out both infinite;
+}
+
+/* animations */
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
