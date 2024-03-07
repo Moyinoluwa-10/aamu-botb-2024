@@ -1,15 +1,17 @@
 import Chatbot from "../components/Chatbot";
-import bgImg from "../assets/images/bg.png";
+import Footer from "../components/Footer";
+// import bgImg from "../assets/images/bg.png";
+import Recommendation from "../components/Recommendation";
 
 const Home = () => {
   return (
     <>
-      <div
-        className="min-h-screen bg-blue-100 bg-cover bg-no-repeat text-white"
-        style={{ backgroundImage: `url(${bgImg})` }}
-      >
-        Home
-      </div>
+      <div className="bg-cover bg-no-repeat">Home</div>
+      <Recommendation />
+      <Recommendation />
+      <Recommendation />
+      <Recommendation />
+      <Footer />
       <Chatbot />
     </>
   );
