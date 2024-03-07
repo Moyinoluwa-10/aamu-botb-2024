@@ -8,6 +8,7 @@ export default {
       },
       colors: {
         primary: "#013369",
+        form: "#1b48e0",
       },
     },
   },
