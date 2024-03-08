@@ -1,9 +1,9 @@
-import img1 from "../assets/images/recommend1.webp";
-import img2 from "../assets/images/recommend2.webp";
-import img3 from "../assets/images/recommend3.webp";
-import img4 from "../assets/images/recommend4.webp";
+import img1 from "../../assets/images/recommend1.webp";
+import img2 from "../../assets/images/recommend2.webp";
+import img3 from "../../assets/images/recommend3.webp";
+import img4 from "../../assets/images/recommend4.webp";
 
-const RecommendationList = [
+const RecommendationList1 = [
   {
     img: img1,
     event: "NFL Throwback",
@@ -30,4 +30,4 @@ const RecommendationList = [
   },
 ];
 
-export default RecommendationList;
+export default RecommendationList1;

@@ -1,13 +1,13 @@
-import RecommendationBox from "./RecommendationBox";
-import RecommendationList from "./RecommendationList";
+import RecommendationBox from "../RecommendationBox";
+import RecommendationList2 from "./RecommendationList2";
 
-const Recommendation = () => {
+const Recommendation2 = () => {
   return (
     <div className="p-5 bg-black text-white">
       <div className="container">
         <p className="text-2xl font-bold mb-5">For you</p>
         <div className="grid grid-cols-4 gap-10">
-          {RecommendationList.map((item, index) => {
+          {RecommendationList2.map((item, index) => {
             return <RecommendationBox key={index} {...item} />;
           })}
         </div>
@@ -16,4 +16,4 @@ const Recommendation = () => {
   );
 };
 
-export default Recommendation;
+export default Recommendation2;
