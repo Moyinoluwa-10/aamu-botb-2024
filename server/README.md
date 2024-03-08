@@ -1,7 +1,10 @@
 # Team Alabama A&M University - HBCU Battle of the Brains
 
 ## Backend Documentation
-This folder contains explorations of how our team uses Artificial Intelligence for our solution, TouchdownAI. It contains models we trained to demonstrate functionality for TouchdownAI, with each subfolder accompanied by a README outlining the specific features.
+This folder contains the backend codebase for the Alabama A&M University team for the HBCU Battle of the Brains competition. The backend is built with Node.js and Express.js. The database used is MongoDB and the ORM used is Mongoose. The server is hosted on Vercel.
+The backend only has two major routes
+- Sign Up
+- Sign In
 
 ---
 
@@ -38,4 +41,4 @@ npm run start
 
 ---
 ### Endpoints
-You need to run the server concurrently with the client to make API calls from the frontend. This is necessary to be able to sign up and sign in if you are running the program on your local system. 
+You need to run the server concurrently with the client to make API calls from the client. This is necessary to be able to sign up and sign in if you are running the program on your local system. 
