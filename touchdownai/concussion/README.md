@@ -8,6 +8,7 @@ This notebook analyses data on concussions in the NFL form 2012-2013, the data i
 It uses a Random Forest Regression model to calculate the feature importances of different parts of models, which would be useful in determining performance or participation or return of specific players if used with real NFL data. An example showing the feature importance is shown below:
 
  
+  ![](./Picture2.png)
 
 ## Data Sources
 NFL Concussions - https://sportsandsociety.osu.edu/sports-data-sets 

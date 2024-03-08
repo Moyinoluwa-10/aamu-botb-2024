@@ -8,6 +8,8 @@ This notebook Initializes simulated injury data for NFL players associated with 
 We then used a Natural Language Understanding Model to query responses from the simulated data as shown below. This can be used in Touchdown AI to build the chatbot that can understand and respond to user queries about games, and players in the NFL+ app.
 
  
+  ![](./Picture6.png)
+
 Sample result from query
 
 
