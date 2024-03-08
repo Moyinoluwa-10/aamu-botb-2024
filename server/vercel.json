@@ -3,14 +3,14 @@
     "name": "api-botb",
     "builds": [
         {
-            "src": "server.js",
+            "src": "index.js",
             "use": "@vercel/node"
         }
     ],
     "routes": [
         {
             "src": "/(.*)",
-            "dest": "/server.js"
+            "dest": "/index.js"
         }
     ]
 }
