@@ -1,8 +1,8 @@
-# React + Vite
+# Team Alabama A&M University - HBCU Battle of the Brains
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## AI Readme
+This folder contains explorations of how our team uses Artificial Intelligence for our solution, TouchdownAI. It contains models we trained to demonstrate functionality for TouchdownAI, with each subfolder accompanied by a README outlining the specific features. To run these models, we used Google Colaboratory along with some publicly available libraries for data analysis.The models were executed using Google Colaboratory, alongside publicly available libraries for data analysis.
 
-Currently, two official plugins are available:
+*Disclaimer:*
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Some features presented in this directory are not currently deployed on our web application, but they serve as demonstrations of our implementation capabilities. This collection provides insights into the potential future features of our solution.
