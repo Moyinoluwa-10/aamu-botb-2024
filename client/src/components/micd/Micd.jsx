@@ -3,11 +3,11 @@ import MicdList from "./MicdList";
 
 const Micd = () => {
   return (
-    <div className="p-5 bg-black text-white">
+    <div className="p-5 py-10 bg-black text-white">
       <div className="container">
         <p className="text-2xl font-bold mb-5">Mic'd Up</p>
         <p className="text-2xl font-bold mb-5"></p>
-        <div className="grid grid-cols-4 gap-10">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {MicdList.map((item, index) => {
             return <RecommendationBox key={index} {...item} />;
           })}
