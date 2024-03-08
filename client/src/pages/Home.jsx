@@ -14,7 +14,6 @@ const Home = () => {
 
   useEffect(() => {
     const data = localStorage.getItem("user");
-    console.log(data);
     setUser(data);
   }, []);
   return (
