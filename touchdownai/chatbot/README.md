@@ -7,7 +7,9 @@ In this notebook we formulated a mock dataset representing player statistics acr
 
 This displays how we can use TouchdownAI to give recommendations on the games and players in the NFL and continue to drive engagement and  use of the application. The pictures below shows sample rows and a prediction for a players’ performance. 
 
-  
+  ![](./Picture4.png)
+  ![](./Picture5.png)
+
 First ten rows of generated 
 
  
