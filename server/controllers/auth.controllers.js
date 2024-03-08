@@ -38,7 +38,13 @@ const signin = async (req, res) => {
     expiresIn: JWT_LIFETIME,
   });
 
-  return res.status(200).json({ msg: "user logged in successfully", token });
+  return res
+    .status(200)
+    .json({
+      msg: "user logged in successfully",
+      token,
+      user: user.favoriteClub,
+    });
 };
 
 module.exports = {

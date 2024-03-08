@@ -1,12 +1,15 @@
 // react & redux
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import * as Yup from "yup";
 import { Formik, Form } from "formik";
 import { MyTextInput } from "../components/FormComponents";
 import NFL1 from "../assets/images/nfl1.webp";
 import NFL2 from "../assets/images/nfl2.webp";
+import axios from "axios";
+import { toast } from "react-hot-toast";
 
 const Login = () => {
+  const navigate = useNavigate();
   return (
     <>
       <Formik
@@ -20,8 +23,27 @@ const Login = () => {
             .required("Required"),
           password: Yup.string().required("Required"),
         })}
-        onSubmit={(values) => {
-          console.log(values);
+        onSubmit={(values, { setSubmitting, resetForm }) => {
+          const toastID = toast.loading("Submitting...");
+          axios
+            .post(`${import.meta.env.VITE_API_URL}/api/v1/auth/signin`, values)
+            // eslint-disable-next-line
+            .then((response) => {
+              toast.success("Sign in successful", {
+                id: toastID,
+              });
+              localStorage.setItem("user", response.data.user);
+              setSubmitting(false);
+              navigate("/");
+              resetForm();
+            })
+            // eslint-disable-next-line
+            .catch((error) => {
+              toast.error("Incorrect email or password", {
+                id: toastID,
+              });
+              setSubmitting(false);
+            });
         }}
       >
         {({ isSubmitting }) => (

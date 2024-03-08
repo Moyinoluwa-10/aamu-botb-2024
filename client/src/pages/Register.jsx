@@ -1,12 +1,19 @@
 // react & redux
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import * as Yup from "yup";
-import { Formik, Form } from "formik";
-import { MyCheckbox, MyTextInput } from "../components/FormComponents";
+import { Formik, Form, ErrorMessage } from "formik";
+import {
+  MyCheckbox,
+  MySelect,
+  MyTextInput,
+} from "../components/FormComponents";
 import NFL1 from "../assets/images/nfl1.webp";
 import NFL2 from "../assets/images/nfl2.webp";
+import axios from "axios";
+import { toast } from "react-hot-toast";
 
 const Register = () => {
+  const navigate = useNavigate();
   return (
     <>
       <Formik
@@ -25,13 +32,34 @@ const Register = () => {
             .email("Invalid email address")
             .required("Required"),
           password: Yup.string().required("Required"),
+          favoriteClub: Yup.string().required("Required"),
           termsAndConditions: Yup.boolean().oneOf(
             [true],
             "You must agree to the terms and conditions to submit the form"
           ),
         })}
-        onSubmit={(values) => {
-          console.log(values);
+        onSubmit={(values, { setSubmitting, resetForm }) => {
+          const toastID = toast.loading("Submitting...");
+          axios
+            .post(`${import.meta.env.VITE_API_URL}/api/v1/auth/signup`, values)
+            // eslint-disable-next-line
+            .then((response) => {
+              console.log(response.data);
+              toast.success("Sign in successful", {
+                id: toastID,
+              });
+              localStorage.setItem("user", response.data.user);
+              setSubmitting(false);
+              navigate("/sign-in");
+              resetForm();
+            })
+            // eslint-disable-next-line
+            .catch((error) => {
+              toast.error("Incorrect email or password", {
+                id: toastID,
+              });
+              setSubmitting(false);
+            });
         }}
       >
         {({ isSubmitting }) => (
@@ -96,20 +124,28 @@ const Register = () => {
                     />
                   </div>
                   <div className="mb-7">
-                    <MyTextInput
-                      name="favoriteClub"
-                      type="text"
-                      placeholder="Enter favorite club"
-                      label={"Favorite Club"}
-                    />
+                    <MySelect name="favoriteClub" label={"Favorite Club"}>
+                      <option value="">Select favorite club</option>
+                      <option value="chiefs">Chiefs</option>
+                      <option value="packers">Packers</option>
+                      <option value="49ers">49ers</option>
+                    </MySelect>
+                    <div className="text-red-500 text-sm">
+                      <ErrorMessage name="favoriteClub" />
+                    </div>
                   </div>
 
-                  <MyCheckbox name="termsAndConditions">
-                    <p>
-                      I agree that the NFL, including member clubs, may send me
-                      content, offers and all.
-                    </p>
-                  </MyCheckbox>
+                  <div className="mb-7">
+                    <MyCheckbox name="termsAndConditions">
+                      <p>
+                        I agree that the NFL, including member clubs, may send
+                        me content, offers and all.
+                      </p>
+                    </MyCheckbox>
+                    <div className="text-red-500 text-sm">
+                      <ErrorMessage name="termsAndConditions" />
+                    </div>
+                  </div>
                 </div>
 
                 <button
