@@ -48,7 +48,7 @@ const Chatbot = () => {
         "A kickoff is a method of starting a drive in american football. Typically, a kickoff consists of one team – the 'kicking team'S – kicking the ball to the opposing team – the 'receiving team'",
     },
   ]);
-  const [isChatting, setIsChatting] = useState(true);
+  const [isChatting, setIsChatting] = useState(false);
   const chatBlockRef = useRef(null);
   const handleToggle = () => {
     setIsChatting((isChatting) => !isChatting);

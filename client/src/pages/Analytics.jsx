@@ -159,7 +159,7 @@ const Analytics = () => {
         <p className="text-center text-white mt-5 text-lg">
           Here are the statistics for the top players in 2023
         </p>
-        <div className="container p-5 py-20 grid grid-cols-4 gap-10">
+        <div className="container p-5 py-20 grid md:grid-cols-2 lg:grid-cols-4 gap-10">
           {players.map((player, index) => {
             return <SpiderwebChart players={player} key={index} />;
           })}

@@ -38,7 +38,7 @@ const SpiderwebChart = ({ players }) => {
   };
 
   return (
-    <div className="border border-gray-400 rounded-2xl py-2 bg-[#ffffff]">
+    <div className="border border-gray-400 rounded-2xl py-2 bg-[#ffffff] w-full">
       <h1 className="text-center font-semibold text-back">{players[0].name}</h1>
       <div className="w-14 h-14 mx-auto rounded-full overflow-hidden">
         <img src={players[0].img} alt="" className="w-full aspect-square" />
