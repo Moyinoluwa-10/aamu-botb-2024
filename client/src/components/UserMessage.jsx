@@ -8,7 +8,7 @@ const UserMessage = ({ message }) => {
       animate={{ x: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
       id="bot-starter-message"
-      className="user-message text-white mb-3 self-end rounded-lg p-3 bg-primary max-w-[80%]"
+      className="user-message text-white mb-3 self-end rounded-lg p-3 bg-[#81a6ce] max-w-[80%]"
     >
       <span>{message}</span>
       <small></small>

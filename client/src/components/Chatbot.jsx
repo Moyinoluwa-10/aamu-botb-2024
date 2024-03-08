@@ -7,6 +7,8 @@ import Loading from "./Loading";
 import predictedResponses from "../data/data.json";
 import ReactHtmlParser from "react-html-parser";
 import { TbMessageCircle2Filled } from "react-icons/tb";
+import logo from "../assets/images/chat-logo.jpeg";
+import bgImg from "../assets/images/bg-chat.jpeg";
 
 const Chatbot = () => {
   const [chatHistory, setChatHistory] = useState([]);
@@ -72,10 +74,22 @@ const Chatbot = () => {
             : "chat-container max-h-0 overflow-hidden"
         }
       >
-        <div className="chat-header ">TouchdownAI</div>
+        <div className="chat-header">
+          <span className="w-8 rounded-full overflow-hidden border-2 border-white">
+            <img src={logo} alt="" className="w-full" />
+          </span>{" "}
+          TouchdownAI
+        </div>
 
-        <div className="chat-body">
-          <div className="chat-block" ref={chatBlockRef}>
+        <div
+          className="chat-body bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${bgImg})` }}
+        >
+          <div
+            className="chat-block bg-cover"
+            style={{ backgroundImage: `url${bgImg}` }}
+            ref={chatBlockRef}
+          >
             <h5 className="chat-timestamp text-center">
               {new Date().getHours() > 10
                 ? new Date().getHours()
