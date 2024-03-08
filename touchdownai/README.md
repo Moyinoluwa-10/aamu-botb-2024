@@ -5,7 +5,7 @@ This folder contains explorations of how our team uses Artificial Intelligence f
 
 *Setup and Installation Instructions*
 
-To run the notebooks, we used Google Colaboratory along with some publicly available libraries for data analysis. If you are not using Colab, ensure to install libraries such as numpy, pandas, sklearn, seaborn, and others.
+To run the notebooks, we used Google Colaboratory along with some publicly available libraries for data analysis. If you are not using Colab, ensure to install libraries such as numpy, pandas, sklearn, seaborn, and others. These libraries are listed in the ```requirements.txt``` file.
 
 *Disclaimer:*
 

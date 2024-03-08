@@ -64,7 +64,7 @@ We added some new features to the current NFL+ streaming app. Some include:
   ![](./images/Screenshot%20(10).png)
 <p align="right"><a href="#readme-top">back to top</a></p>
 
-The frontend and backend of the web application built can be accessed [here](https://touchdownai.vercel.app/). You can read more regarding each section of the project by clicking on the links below.
+The frontend and backend of the web application built can be accessed [here](https://touchdownai.vercel.app/). You can read more regarding each section of the project by clicking on the links below. We created a video demo of the web application and it can be accessed [here](https://www.youtube.com/watch?v=gEElIsotuIo)
 
 ---
 
