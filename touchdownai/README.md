@@ -7,3 +7,5 @@ This folder contains explorations of how our team uses Artificial Intelligence f
 
 Some features presented in this directory are not currently deployed on our web application, but they serve as demonstrations of our implementation capabilities. This collection provides insights into the potential future features of our solution.
 
+![](./Big_logo.jpeg)
+
