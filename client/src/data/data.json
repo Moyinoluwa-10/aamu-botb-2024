@@ -6,5 +6,21 @@
   {
     "question": "Give a summary of the just-concluded Super Bowl game with important highlights.",
     "response": "The just-concluded Super Bowl game was played between the Kansas City Chiefs and the Tampa Bay Buccaneers. The Buccaneers emerged as the winners with a score of 31-20. Tom Brady threw for three touchdown passes, and Rob Gronkowski scored two touchdowns for the Buccaneers. Patrick Mahomes completed a 60-yard touchdown pass to Tyreek Hill. Tampa Bay's defense made crucial stops in the fourth quarter. The game was played at Raymond James Stadium in Tampa, FL, and Tom Brady was named the MVP of the game."
+  },
+  {
+    "question": "Hi there",
+    "response": "Hello! How can I help you today?"
+  },
+  {
+    "question": "What is a touchdown",
+    "response": "A touchdown is a scoring play in american football. Whether running, passing, returning a kickoff or punt, or recovering a turnover, a team scores a touchdown by advancing the ball into the opponent's end zone."
+  },
+  {
+    "question": "What is a turnover",
+    "response": "In american football, a turnover occurs when the team with the ball loses possession of the ball to the opposing team."
+  },
+  {
+    "question": "What is a kickoff",
+    "response": "A kickoff is a method of starting a drive in american football. Typically, a kickoff consists of one team – the 'kicking team'S – kicking the ball to the opposing team – the 'receiving team'"
   }
 ]
