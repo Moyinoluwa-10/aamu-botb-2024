@@ -53,3 +53,7 @@
   transition: all 0.5s ease;
   will-change: opacity;
 }
+
+#chart {
+  height: 440px;
+}

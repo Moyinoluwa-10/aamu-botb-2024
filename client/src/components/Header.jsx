@@ -1,5 +1,5 @@
 // react
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 // hamburger
@@ -10,6 +10,17 @@ import logo from "../assets/svgs/logo.svg";
 
 const Header = () => {
   const [isOpen, setOpen] = useState(false);
+  const [user, setUser] = useState("");
+
+  useEffect(() => {
+    const data = localStorage.getItem("user");
+    setUser(data);
+  }, []);
+
+  const logOut = () => {
+    localStorage.removeItem("user");
+    setUser("");
+  };
 
   return (
     <div>
@@ -72,17 +83,31 @@ const Header = () => {
                 Combine
               </Link>
             </li>
+            <li>
+              <Link className="nav-link" to={"/analytics"}>
+                Analytics
+              </Link>
+            </li>
           </ul>
         </div>
 
         <div className="flex items-center gap-3">
           <div className="text-sm font-semibold">
-            <Link
-              to={"/sign-in"}
-              className="bg-white text-form py-2 px-3 rounded-md"
-            >
-              Sign In
-            </Link>
+            {user ? (
+              <button
+                className="bg-white text-form py-2 px-3 rounded-md"
+                onClick={logOut}
+              >
+                Sign Out
+              </button>
+            ) : (
+              <Link
+                to={"/sign-in"}
+                className="bg-white text-form py-2 px-3 rounded-md"
+              >
+                Sign In
+              </Link>
+            )}
           </div>
 
           <div className="block lg:hidden">
@@ -140,6 +165,11 @@ const Header = () => {
         <li>
           <Link className="nav-link" to={"/"}>
             Combine
+          </Link>
+        </li>
+        <li>
+          <Link className="nav-link" to={"/analytics"}>
+            Analytics
           </Link>
         </li>
       </ul>

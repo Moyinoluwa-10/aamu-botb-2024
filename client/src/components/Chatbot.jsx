@@ -11,8 +11,44 @@ import logo from "../assets/images/chat-logo.jpeg";
 import bgImg from "../assets/images/bg-chat.jpeg";
 
 const Chatbot = () => {
-  const [chatHistory, setChatHistory] = useState([]);
-  const [isChatting, setIsChatting] = useState(false);
+  const [chatHistory, setChatHistory] = useState([
+    {
+      owner: "user",
+      responses: "Hi there!",
+    },
+    {
+      owner: "bot",
+      responses: "Hello! How can I help you today?",
+    },
+    {
+      owner: "user",
+      responses: "What is a touchdown",
+    },
+    {
+      owner: "bot",
+      responses:
+        "A touchdown is a scoring play in american football. Whether running, passing, returning a kickoff or punt, or recovering a turnover, a team scores a touchdown by advancing the ball into the opponent's end zone. ",
+    },
+    {
+      owner: "user",
+      responses: "What is a turnover",
+    },
+    {
+      owner: "bot",
+      responses:
+        "In american football, a turnover occurs when the team with the ball loses possession of the ball to the opposing team. ",
+    },
+    {
+      owner: "user",
+      responses: "What is a kickoff",
+    },
+    {
+      owner: "bot",
+      responses:
+        "A kickoff is a method of starting a drive in american football. Typically, a kickoff consists of one team – the 'kicking team'S – kicking the ball to the opposing team – the 'receiving team'",
+    },
+  ]);
+  const [isChatting, setIsChatting] = useState(true);
   const chatBlockRef = useRef(null);
   const handleToggle = () => {
     setIsChatting((isChatting) => !isChatting);
@@ -50,7 +86,11 @@ const Chatbot = () => {
           resetForm();
           setChatHistory((prevData) => [
             ...prevData,
-            { owner: "bot", responses: "I don't understand" },
+            {
+              owner: "bot",
+              responses:
+                "Sorry, I have not been trained to respond to this type of question. However, I am constantly improving.",
+            },
           ]);
           chatBlockRef.current.scrollIntoView({
             block: "end",
