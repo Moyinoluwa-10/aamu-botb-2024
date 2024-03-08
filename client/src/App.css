@@ -43,3 +43,13 @@
     opacity: 0;
   }
 }
+
+.background .video {
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  will-change: opacity;
+}

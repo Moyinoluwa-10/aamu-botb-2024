@@ -8,6 +8,7 @@ import Recommendation3 from "../components/recommendation/Recommendation3";
 import Recommendation2 from "../components/recommendation/Recommendation2";
 import Header from "../components/Header";
 import { useEffect, useState } from "react";
+import Hero from "../components/Hero";
 
 const Home = () => {
   const [user, setUser] = useState("");
@@ -19,6 +20,7 @@ const Home = () => {
   return (
     <>
       <Header />
+      <Hero />
       {user === "chiefs" ? (
         <Recommendation1 />
       ) : user === "49ers" ? (
