@@ -58,7 +58,7 @@ We added some new features to the current NFL+ streaming app. Some include:
   ![](./images/Screenshot%20(12).png) 
   <br />
 - A personalized interface based on the users preferences and history
-  ![](./images/Screenshot%20(12).png)
+  ![](./images/Screenshot%20(11).png)
    <br />
 - Analytics of top players. More advanced analytics can be generated with time.
   ![](./images/Screenshot%20(10).png)

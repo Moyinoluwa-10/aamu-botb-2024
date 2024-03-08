@@ -110,7 +110,7 @@ const Header = () => {
             )}
           </div>
 
-          <div className="block lg:hidden">
+          <div className="block lg:hidden relative">
             <Hamburger toggled={isOpen} toggle={setOpen} size={25} />
           </div>
         </div>

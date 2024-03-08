@@ -145,7 +145,7 @@ const Chatbot = () => {
         </div>
       </div>
       <div
-        className="w-14 h-14 rounded-full border-2 fixed bottom-10 right-10 bg-primary flex items-center justify-center cursor-pointer animate-bounce"
+        className="w-14 h-14 rounded-full border-2 fixed bottom-10 right-5 sm:right-10 bg-primary flex items-center justify-center cursor-pointer animate-bounce"
         onClick={handleToggle}
       >
         <TbMessageCircle2Filled className="text-white text-4xl" />

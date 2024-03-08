@@ -14,7 +14,7 @@
 @tailwind utilities;
 
 .chat-container {
-  @apply w-[400px] h-[600px] rounded-xl flex flex-col fixed bottom-32 right-10 bg-white transition-all duration-300;
+  @apply sm:w-[400px] h-[50vh] sm:h-[600px] rounded-xl flex flex-col fixed bottom-32 right-5 sm:right-10 bg-white transition-all duration-300 ml-2;
 }
 
 .chat-header {
