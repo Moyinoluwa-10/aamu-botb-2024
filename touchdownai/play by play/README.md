@@ -13,6 +13,6 @@ Excerpt from code showing usage of the Model to predict quaterback's point
 
 
 ## Data Sources
-2023 play by play - https://nflsavant.com/pbp_data.php?year=2023 <b>
+2023 play by play - https://nflsavant.com/pbp_data.php?year=2023 <br>
 2022 play by play - https://nflsavant.com/pbp_data.php?year=2022 
  
